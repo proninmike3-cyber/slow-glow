@@ -46,94 +46,109 @@
   .contact-actions{margin-top:13px}
   .map-frame{height:calc(100svh - 180px)}
 }
-/* Mobile: compact sections, touch-friendly reviews, and 2×2 photography grid. */
+/* Mobile layout rhythm: natural-height sections rather than forced empty screens. */
 @media (max-width:800px) {
-  .section{min-height:calc(100svh - 74px - 70px - env(safe-area-inset-bottom));display:flex;flex-direction:column;justify-content:center;padding:clamp(19px,3.2svh,35px) 0}
-  .section-head{margin-bottom:clamp(12px,2svh,22px)}
-  .section-head h2{font-size:clamp(36px,6vw,55px);line-height:1.07;margin-top:6px}
-  .section-sub{font-size:12px;line-height:1.5;margin-top:10px}
-  .categories{gap:7px;margin-bottom:12px}
-  .category-btn{padding:9px 13px}
-  .price-item{padding:12px 3px;gap:12px}
-  .price-title{font-size:20px}
-  .price-title small{margin-top:3px}
-  .services-bottom{margin-top:12px}
-  .gallery-grid{grid-template-rows:repeat(2,clamp(155px,24svh,235px));gap:10px}
-  .about-grid{gap:18px}
-  .about-images{height:min(280px,29svh);max-width:520px;width:100%}
-  .about-content h2{font-size:clamp(38px,7vw,56px);margin:8px 0 12px}
-  .about-content>p{font-size:12.5px;line-height:1.45;margin:0 0 8px}
-  .about-points{margin:12px 0;padding-top:12px;gap:12px}
-  .about-point svg{margin-bottom:4px;width:18px;height:18px}
-  .about-point b{font-size:11px;margin-bottom:4px}
-  .about-point p{font-size:10px;line-height:1.45}
-  .reviews .section-head{margin-bottom:16px}
-  .review-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:2px;gap:12px;padding-bottom:10px;-webkit-overflow-scrolling:touch}
-  .review-card,.review-card:last-child{flex:0 0 min(82%,360px);min-height:clamp(190px,24svh,240px);grid-column:auto;padding:24px 22px;scroll-snap-align:start}
-  .review-text{font-size:clamp(22px,4vw,29px);line-height:1.32}
-  .reviews-bottom{margin-top:12px;justify-content:flex-end}
-  .contact-layout{gap:18px}
-  .contact-head h2{font-size:clamp(40px,6vw,54px);margin:9px 0 17px}
-  .contact-block{margin-bottom:13px;gap:9px}
-  .contact-block p,.contact-block a{font-size:clamp(18px,3.5vw,23px)}
-  .contact-actions{margin-top:15px;gap:15px}
-  .contact-actions .btn{min-height:48px;padding:12px 18px}
-  .map-frame{height:clamp(190px,23svh,290px)}
-  .map-cover{padding:9px 12px;left:10px;bottom:10px}
-  .gift-inner{padding:40px 0 26px}
-  .gift-art{height:155px}
-  .moment{padding:40px 0}
+  .section {display:block; min-height:0; padding:clamp(52px,7.2vw,76px) 0;}
+  .section-head {margin-bottom:28px; gap:15px;}
+  .section-head h2 {font-size:clamp(40px,6.7vw,57px); line-height:1.12; margin-top:12px;}
+  .section-sub {font-size:14px; line-height:1.7; margin:14px 0 0; max-width:480px;}
+  .eyebrow {line-height:1.6;}
+  .categories {gap:9px; margin-bottom:23px;}
+  .category-btn {font-size:12px; padding:11px 17px;}
+  .price-item {padding:18px 4px; gap:12px 18px;}
+  .price-title {font-size:22px; line-height:1.25;}
+  .price-title small {font-size:12px; line-height:1.55; margin-top:8px;}
+  .price-value {font-size:17px;}
+  .services-bottom {margin-top:24px; gap:14px; font-size:12px; line-height:1.65;}
+  .gallery-grid {grid-template-rows:repeat(2,clamp(190px,27vw,245px)); gap:12px;}
+  .photo-label {font-size:11px;}
+  .about-grid {gap:32px;}
+  .about-images {height:clamp(225px,34vw,370px); width:100%; max-width:560px;}
+  .about-content h2 {font-size:clamp(42px,7vw,61px); line-height:1.14; margin:12px 0 22px;}
+  .about-content>p {font-size:14px; line-height:1.75; margin:0 0 14px; max-width:530px;}
+  .about-points {margin:25px 0 23px; padding-top:23px; gap:20px;}
+  .about-point svg {width:22px; height:22px; margin-bottom:10px;}
+  .about-point b {font-size:12px; line-height:1.5; margin-bottom:7px;}
+  .about-point p {font-size:12px; line-height:1.6;}
+  .reviews .section-head {margin-bottom:25px;}
+  .review-grid {display:flex; overflow-x:auto; scroll-snap-type:x mandatory; scroll-padding-inline:2px; gap:14px; padding-bottom:12px; -webkit-overflow-scrolling:touch;}
+  .review-card,.review-card:last-child {flex:0 0 min(80%,365px); grid-column:auto; scroll-snap-align:start; min-height:245px; padding:27px 24px; gap:14px;}
+  .review-asterisk {font-size:36px;}
+  .review-text {font-size:clamp(23px,3.5vw,29px); line-height:1.44;}
+  .review-card footer {padding-top:14px;}
+  .reviews-bottom {justify-content:flex-end; margin-top:25px;}
+  .contact-layout {gap:30px;}
+  .contact-head h2 {font-size:clamp(43px,7vw,58px); margin:12px 0 30px;}
+  .contact-block {grid-template-columns:24px 1fr; gap:13px; margin-bottom:22px;}
+  .contact-block .icon {width:20px; height:20px;}
+  .contact-block .lab {font-size:10px; margin-bottom:9px; line-height:1.5;}
+  .contact-block p,.contact-block a {font-size:clamp(20px,3.2vw,25px); line-height:1.42;}
+  .contact-actions {gap:21px; margin-top:27px;}
+  .contact-actions .btn {min-height:50px; padding:13px 20px;}
+  .map-frame {height:clamp(255px,36vw,365px);}
+  .map-cover {padding:10px 14px;}
+  .moment {padding:58px 0;}
+  .gift-inner {padding:65px 0 49px;}
+  .gift-art {height:170px;}
 }
 @media (max-width:560px) {
-  .section{min-height:calc(100svh - 68px - 70px - env(safe-area-inset-bottom));padding:clamp(14px,2.4svh,22px) 0}
-  .section-head{margin-bottom:12px}
-  .section-head h2{font-size:clamp(37px,9vw,48px)}
-  .section-sub{font-size:11.5px;line-height:1.4}
-  .category-btn{font-size:10px;padding:8px 11px}
-  .price-item{padding:clamp(8px,1.2svh,12px) 3px;gap:10px}
-  .price-title{font-size:clamp(17px,4.7vw,20px)}
-  .price-title small{font-size:10px;line-height:1.35}
-  .price-value{font-size:15px}
-  .services-bottom{font-size:11px;margin-top:9px;gap:7px}
-  .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,clamp(125px,22svh,190px));gap:8px}
-  .gallery-grid .photo:first-child,.gallery-grid .photo:nth-child(4){grid-column:auto;grid-row:auto}
-  .photo-label{font-size:9px;left:8px;bottom:8px}
-  .about-images{height:clamp(120px,21svh,210px)}
-  .about-grid{gap:11px}
-  .about-stamp{width:75px;height:75px;font-size:15px}
-  .about-content h2{font-size:clamp(34px,8vw,45px);margin:5px 0 8px}
-  .about-content>p{font-size:11.5px;line-height:1.35;margin:0 0 6px}
-  .about-points{margin:7px 0;padding-top:8px;gap:9px}
-  .about-point svg{height:15px;width:15px;margin-bottom:2px}
-  .about-point p{font-size:9.5px;line-height:1.25}
-  .reviews .section-head{margin-bottom:10px}
-  .review-card,.review-card:last-child{flex-basis:88%;min-height:clamp(166px,23svh,200px);padding:17px 17px;gap:5px}
-  .review-asterisk{font-size:27px}
-  .review-text{font-size:22px}
-  .contact-layout{gap:10px}
-  .contact-head h2{font-size:clamp(36px,8vw,45px);margin:5px 0 10px}
-  .contact-block{grid-template-columns:22px 1fr;gap:8px;margin-bottom:8px}
-  .contact-block .icon{width:17px;height:17px}
-  .contact-block .lab{font-size:9px;margin-bottom:3px}
-  .contact-block p,.contact-block a{font-size:clamp(17px,4.4vw,21px);line-height:1.2}
-  .contact-actions{margin-top:10px;gap:12px}
-  .contact-actions .btn{min-height:44px;padding:10px 14px}
-  .contact-actions .line-link{font-size:11px}
-  .map-frame{height:clamp(140px,21svh,210px)}
-  .gift-inner{padding:30px 0 15px}
-  .gift-copy h2{font-size:clamp(35px,9vw,45px)}
-  .gift-copy p{font-size:12px;line-height:1.5;margin-bottom:16px}
-  .gift-art{height:115px}
-  .gift-circle{width:125px;height:125px;font-size:25px}
+  .section {min-height:0; padding:50px 0 56px;}
+  .section-head {margin-bottom:25px;}
+  .section-head h2 {font-size:clamp(38px,10.6vw,47px); margin-top:10px; line-height:1.1;}
+  .section-sub {font-size:13.5px; line-height:1.7; margin-top:13px;}
+  .categories {gap:8px; margin-bottom:20px;}
+  .category-btn {font-size:11px; padding:10px 14px;}
+  .price-item {grid-template-columns:minmax(0,1fr) auto; padding:17px 3px; gap:10px;}
+  .price-title {font-size:20px;}
+  .price-title small {font-size:11.5px; line-height:1.55; margin-top:6px;}
+  .price-value {font-size:16px; align-self:center;}
+  .services-bottom {margin-top:22px; gap:12px; font-size:12px;}
+  .gallery-grid {grid-template-columns:repeat(2,minmax(0,1fr)); grid-template-rows:repeat(2,clamp(165px,47vw,210px)); gap:10px;}
+  .gallery-grid .photo:first-child,.gallery-grid .photo:nth-child(4) {grid-row:auto; grid-column:auto;}
+  .photo-label {font-size:10px; left:10px; bottom:10px;}
+  .about-grid {gap:27px;}
+  .about-images {height:clamp(205px,58vw,260px);}
+  .about-stamp {width:83px; height:83px; font-size:17px;}
+  .about-content h2 {font-size:clamp(39px,10.5vw,47px); margin:10px 0 19px;}
+  .about-content>p {font-size:13.5px; line-height:1.72; margin:0 0 14px;}
+  .about-points {gap:15px; margin:22px 0 22px; padding-top:22px;}
+  .about-point svg {height:21px; width:21px; margin-bottom:10px;}
+  .about-point b {font-size:11.5px; line-height:1.45; margin-bottom:7px;}
+  .about-point p {font-size:11.5px; line-height:1.58;}
+  .reviews .section-head {margin-bottom:22px;}
+  .review-card,.review-card:last-child {flex-basis:86%; min-height:235px; padding:26px 23px; gap:13px;}
+  .review-asterisk {font-size:34px;}
+  .review-text {font-size:24px; line-height:1.4;}
+  .reviews-bottom {margin-top:21px;}
+  .contact-layout {gap:28px;}
+  .contact-head h2 {font-size:clamp(41px,10.8vw,49px); margin:10px 0 28px;}
+  .contact-block {grid-template-columns:22px minmax(0,1fr); gap:12px; margin-bottom:21px;}
+  .contact-block .icon {height:19px; width:19px;}
+  .contact-block .lab {font-size:10px; margin-bottom:7px;}
+  .contact-block p,.contact-block a {font-size:clamp(19px,5.2vw,23px); line-height:1.42;}
+  .contact-actions {margin-top:26px; gap:19px;}
+  .contact-actions .btn {min-height:49px; padding:12px 19px;}
+  .contact-actions .line-link {font-size:12px;}
+  .map-frame {height:265px;}
+  .gift-inner {padding:60px 0 40px;}
+  .gift-copy h2 {font-size:43px; margin:15px 0 22px;}
+  .gift-copy p {font-size:13.5px; line-height:1.75; margin-bottom:24px;}
+  .gift-art {height:150px;}
+  .gift-circle {height:150px; width:150px; font-size:29px;}
+  .moment {padding:60px 0;}
+  .moment h3 {font-size:clamp(36px,9.2vw,43px); line-height:1.26; margin-bottom:25px;}
+  .footer-top {padding-top:40px; padding-bottom:32px;}
+  .contact-block a[href^="tel:"] {white-space:normal;}
 }
-@media (max-width:560px) and (max-height:710px) {
-  .section{padding:11px 0}
-  .section-head h2{font-size:clamp(34px,8vw,42px)}
-  .section-sub{margin-top:6px}
-  .about-images{height:clamp(100px,16svh,140px)}
-  .about-content>p{font-size:11px}
-  .about-points{margin:5px 0;padding-top:5px}
-  .map-frame{height:clamp(125px,20svh,160px)}
+@media (max-width:360px) {
+  .section {padding:43px 0 48px;}
+  .section-head h2 {font-size:37px;}
+  .category-btn {padding:9px 11px;}
+  .price-title {font-size:18px;}
+  .price-value {font-size:15px;}
+  .about-points {gap:11px;}
+  .about-point b,.about-point p {font-size:11px;}
+  .contact-actions {gap:14px;}
 }
 
 /* Prevent a collapsed hero artwork on narrow mobile screens. */
